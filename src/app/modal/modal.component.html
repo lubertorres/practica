@@ -1,0 +1,46 @@
+<ng-template #contenido let-modal>
+    <div class="modal-header">
+        <h4 class="ModalTitle">Nuevo Cliente</h4>
+        <button class="close" aria-label="close" type="button" (click)="modal.dismiss()">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+        <p style="color: red;">Todos los campos son requeridos*</p>
+        <div class="form-group">
+            <label for="cedula">Cédula*</label>
+            <input type="text" class="form-control" id="cedula" [(ngModel)]="nuevoCliente.cedula" required>
+        </div>
+        <div class="form-group">
+            <label for="nombres">Nombres*</label>
+            <input type="text" class="form-control" id="nombres" [(ngModel)]="nuevoCliente.nombres" required>
+        </div>
+        <div class="form-group">
+            <label for="apellidos">Apellidos*</label>
+            <input type="text" class="form-control" id="apellidos" [(ngModel)]="nuevoCliente.apellidos" required>
+        </div>
+        <div class="form-group">
+            <label for="direccion">Dirección*</label>
+            <input type="text" class="form-control" id="direccion" [(ngModel)]="nuevoCliente.direccion" required>
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono*</label>
+            <input type="text" class="form-control" id="telefono" [(ngModel)]="nuevoCliente.telefono" required  >
+        </div>
+    </div>
+    <div class="modal-footer">
+
+        <button type="button" class="btn btn-primary" (click)="guardarCliente(); modal.close()">
+            Guardar Cliente
+        </button>
+        <button type="button" class="btn btn-danger" (click)="modal.close()">
+            Cancelar
+        </button>
+    </div>
+</ng-template>
+
+
+
+
+<button type="button" class="btn btn-outline-danger" (click)="modal.open(contenido)">Nuevo +</button>
+
