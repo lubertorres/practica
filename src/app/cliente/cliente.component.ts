@@ -11,7 +11,7 @@ export class ClienteComponent implements OnInit {
   clientes: any[] = [];
   clienteIn: string = '';
   nuevoCliente: any = {}; 
-  clienteEditado: any = {}; // Cliente que se está editando
+  clienteEditado: any = {};
 
   constructor(private router: Router, public modal:NgbModal) {}
 
