@@ -66,3 +66,38 @@ export class ClienteComponent implements OnInit {
     }
   }
 }
+
+
+
+
+
+//constructor(private httpclient: HttpClient, private router: Router) {
+    // setInterval(() => {
+    //   console.log('Username' + this.username);
+    //   console.log('Password' + this.password);
+    //   this.date = Date.now().toString();
+    // }, 500);
+  //}
+// postPetition() {
+  //   const headers = new HttpHeaders().append('content-type', 'application/json');
+  //   const options = { headers: headers };
+  //   const body = {
+  //     username: this.username,
+  //     password: this.password,
+  //   };
+
+  //   this.httpclient
+  //   .post<any>('https://api.github.com/users', {})
+  //   .subscribe((data) => {
+  //     console.log(data);
+  //   });
+  // }
+
+
+  // getPetition() {
+  //   this.httpclient.get("https://rickandmortyapi.com/api/character")
+  //   .subscribe((data : any) => {
+  //     this.response = data.results
+  //     console.log(data);
+  //   });
+  // }
